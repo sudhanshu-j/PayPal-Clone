@@ -1,0 +1,1193 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* Common Styles */
+* {
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  text-decoration: none; /* Remove underline from links */
+  list-style-type: none; /* Remove bullet points from lists */
+  outline: none; /* Remove outline from focused elements */
+  font-family: "Lato", sans-serif; /* Set font family */
+}
+
+html {
+  font-size: 62.5%; /* Set base font size for rem calculations */
+}
+
+.logo {
+  font-size: 3.5rem; /* Set logo font size */
+  font-style: italic; /* Italicize the logo text */
+  font-weight: 800; /* Set font weight for logo */
+  color: #fff; /* Logo text color */
+  position: relative; /* Position for child elements */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.p-1 {
+  font-size: 4.5rem; /* Set size for the first part of the logo */
+  margin-right: 1rem; /* Add margin to the right */
+  position: relative; /* Position for layering */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+.p-2 {
+  font-size: 4.5rem; /* Set size for the second part of the logo */
+  color: #bbb; /* Set color for the second part */
+  position: absolute; /* Position relative to the parent */
+  top: 0.4rem; /* Position from the top */
+  left: 0.5rem; /* Position from the left */
+}
+
+.blue-btn {
+  width: 35rem; /* Set button width */
+  height: 5rem; /* Set button height */
+  background-color: #036bb1; /* Set button background color */
+  color: #fff; /* Set button text color */
+  border-radius: 3rem; /* Round button corners */
+  border: none; /* Remove button border */
+  font-size: 1.6rem; /* Set button font size */
+  font-weight: 600; /* Set button font weight */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* End of Common Styles */
+
+/* Section 1 */
+.section-1 {
+  width: 100%; /* Full width */
+  height: 65vh; /* Set height relative to viewport */
+  background: linear-gradient(
+      to top,
+      rgba(38, 38, 38, 0.7),
+      /* Gradient color from dark */ rgba(38, 38, 38, 0.6)
+        /* Gradient color to lighter */
+    ),
+    url(images/bg.jpg) center no-repeat; /* Background image */
+  background-size: cover; /* Cover the entire section */
+  position: relative; /* Position for child elements */
+}
+
+.navbar-wrapper {
+  width: 100%; /* Full width */
+  height: 8rem; /* Set navbar height */
+  border-bottom: 0.1rem solid #aaa; /* Bottom border */
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center items */
+}
+
+.navbar {
+  width: 120rem; /* Set navbar width */
+  height: 100%; /* Full height */
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+}
+
+.menu {
+  display: none; /* Initially hide menu icon */
+}
+
+.nav-list {
+  display: flex; /* Flex layout for nav items */
+}
+
+.nav-list-item {
+  height: 8rem; /* Set height for nav items */
+  padding: 2rem; /* Add padding */
+  display: flex; /* Flex layout */
+  align-items: center; /* Center items vertically */
+  transition: border-bottom 0.1s; /* Smooth transition for border */
+}
+
+.nav-list-item:hover {
+  border-bottom: 0.2rem solid #fff; /* Change border color on hover */
+}
+
+.nav-dropdown {
+  width: 100%; /* Full width for dropdown */
+  height: 20rem; /* Set height for dropdown */
+  background: linear-gradient(
+    to right,
+    #066399,
+    #2f8fdf,
+    #066399
+  ); /* Gradient background */
+  position: absolute; /* Absolute positioning */
+  top: 8rem; /* Position below navbar */
+  left: 0; /* Align to the left */
+  z-index: 100; /* High stacking order */
+  padding: 0 30rem; /* Padding on left and right */
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center items */
+  flex-wrap: wrap; /* Allow wrapping of items */
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially not visible */
+}
+
+.nav-dropdown-item {
+  width: 25rem; /* Set width for dropdown items */
+  margin: 2rem 10rem; /* Add margin */
+  display: flex; /* Flex layout for items */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.dropdown-heading {
+  display: none; /* Hide dropdown heading */
+}
+
+.nav-dropdown-link-1 {
+  font-size: 1.6rem; /* Set font size for primary dropdown links */
+  color: #fff; /* Set text color */
+}
+
+.nav-dropdown-link-2 {
+  font-size: 1.3rem; /* Set font size for secondary dropdown links */
+  color: #fff; /* Set text color */
+}
+
+.nav-list-link {
+  width: 100%; /* Full width for nav links */
+  height: 100%; /* Full height */
+  font-size: 1.7rem; /* Set font size */
+  font-weight: 400; /* Set font weight */
+  text-transform: uppercase; /* Uppercase text */
+  color: #fff; /* Text color */
+  display: flex; /* Flex layout */
+  align-items: center; /* Center items vertically */
+}
+
+.nav-list-link i {
+  font-size: 1.5rem; /* Set size for icons */
+  margin-left: 0.5rem; /* Space between text and icon */
+  transition: transform 0.3s; /* Smooth icon rotation transition */
+}
+
+.navbar-btn {
+  width: 8rem; /* Set button width */
+  padding: 0.7rem; /* Add padding */
+  margin: 0.3rem; /* Add margin */
+  border-radius: 3rem; /* Round button corners */
+  border: 0.1rem solid #fff; /* Button border */
+  font-size: 1.4rem; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.navbar-btn:nth-child(1) {
+  background-color: transparent; /* Transparent background for first button */
+  color: #fff; /* Text color for first button */
+}
+
+.navbar-btn:nth-child(2) {
+  background-color: #fff; /* White background for second button */
+  color: #262626; /* Dark text color for second button */
+}
+
+.banner {
+  width: 100%; /* Full width */
+  position: absolute; /* Absolute positioning */
+  top: 25%; /* Position from the top */
+  text-align: center; /* Center text */
+}
+
+.banner-heading {
+  font-size: 6rem; /* Set size for banner heading */
+  font-weight: 300; /* Set font weight */
+  color: #fff; /* Text color */
+  margin-bottom: 3rem; /* Space below heading */
+}
+
+.banner-paragraph {
+  font-size: 1.8rem; /* Set size for banner paragraph */
+  color: #fff; /* Text color */
+  width: 50%; /* Set width of paragraph */
+  margin: 0 auto 4rem auto; /* Center paragraph and add bottom margin */
+}
+/* End of Section 1 */
+
+/* Section 2 */
+.section-2 {
+  width: 100%; /* Full width */
+  padding: 10rem 0 15rem 0; /* Vertical padding */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.section-2-heading {
+  font-size: 5rem; /* Heading font size */
+  font-weight: 300; /* Light font weight */
+  color: #333; /* Heading text color */
+  margin-bottom: 3rem; /* Space below heading */
+}
+
+.services {
+  display: flex; /* Flex layout for services */
+}
+
+.service {
+  width: 35rem; /* Set width for service cards */
+  text-align: center; /* Center text */
+  margin: 0 5rem; /* Horizontal margin */
+}
+
+.service i {
+  font-size: 6rem; /* Icon size */
+  color: #229fe7; /* Icon color */
+  margin: 2rem 0; /* Vertical margin around icon */
+}
+
+.service-heading {
+  font-size: 3rem; /* Size for service heading */
+  font-weight: 300; /* Light font weight */
+  margin-bottom: 1rem; /* Space below heading */
+}
+
+.service-paragraph {
+  font-size: 1.5rem; /* Size for service paragraph */
+  font-weight: 600; /* Semi-bold font weight */
+  margin-bottom: 2rem; /* Space below paragraph */
+  line-height: 1.2; /* Line height for readability */
+}
+
+.service-btn {
+  width: 20rem; /* Button width */
+  padding: 1.5rem; /* Button padding */
+  background-color: transparent; /* Transparent background */
+  border-radius: 3rem; /* Round button corners */
+  border: 0.1rem solid #036bb1; /* Button border */
+  color: #036bb1; /* Button text color */
+  font-size: 1.5rem; /* Button font size */
+  font-weight: bold; /* Bold font weight */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* End of Section 2 */
+
+/* Section 3 */
+.section-3 {
+  width: 100%; /* Full width */
+  padding: 5rem 0; /* Vertical padding */
+  background: linear-gradient(
+    to right,
+    rgba(3, 33, 129, 0.9),
+    /* Gradient color */ rgba(9, 67, 153, 0.8),
+    /* Gradient color */ rgba(4, 32, 124, 0.9) /* Gradient color */
+  );
+  color: #fff; /* Text color */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.section-3-heading {
+  font-size: 5rem; /* Heading font size */
+  font-weight: 300; /* Light font weight */
+  margin-bottom: 5rem; /* Space below heading */
+}
+
+.features {
+  width: 70%; /* Width of features section */
+  display: flex; /* Flex layout for features */
+  flex-wrap: wrap; /* Allow wrapping of feature items */
+}
+
+.feature {
+  width: calc(100% / 3); /* Each feature takes one-third of the row */
+  text-align: center; /* Center text */
+  padding: 0 5rem; /* Horizontal padding */
+  margin-bottom: 5rem; /* Space below feature items */
+}
+
+.feature-heading {
+  width: max-content; /* Adjust width to content */
+  font-size: 3rem; /* Feature heading size */
+  font-weight: 300; /* Light font weight */
+  margin: 0 auto 1rem auto; /* Center feature heading */
+}
+
+.feature-paragraph {
+  font-size: 1.5rem; /* Size for feature paragraph */
+  font-weight: 500; /* Medium font weight */
+  line-height: 1.2; /* Line height for readability */
+}
+
+/* End of Section 3 */
+
+/* Section 4 */
+.section-4 {
+  width: 100%; /* Full width */
+  padding: 10rem 0; /* Vertical padding */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.section-4-heading {
+  font-size: 5rem; /* Heading font size */
+  font-weight: 400; /* Medium font weight */
+  color: #444; /* Heading text color */
+  margin-bottom: 5rem; /* Space below heading */
+}
+
+.section-4-content {
+  display: flex; /* Flex layout for content */
+}
+
+.section-4-img-wrapper {
+  width: 50rem; /* Width for image wrapper */
+}
+
+.section-4-img-wrapper img {
+  width: 100%; /* Image takes full width */
+  opacity: 0.8; /* Slightly transparent image */
+}
+
+.section-4-list {
+  width: 55%; /* Width for the list of items */
+  margin-top: 2rem; /* Space above list */
+}
+
+.section-4-list-item {
+  font-size: 1.6rem; /* Size for list item */
+  font-weight: 600; /* Semi-bold font weight */
+  display: flex; /* Flex layout for list items */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 2rem; /* Space below list items */
+}
+
+.number {
+  width: 3.5rem; /* Width for number indicator */
+  height: 3.5rem; /* Height for number indicator */
+  border: 0.1rem solid #555; /* Border for number indicator */
+  border-radius: 50%; /* Circular shape */
+  margin-right: 1.5rem; /* Space to the right */
+  display: flex; /* Flex layout for number indicator */
+  justify-content: center; /* Center number */
+  align-items: center; /* Center number */
+}
+
+.section-4-list-item a {
+  color: #036bb1; /* Link color */
+  font-weight: bold; /* Bold font weight for links */
+}
+
+/* End of Section 4 */
+
+/* Section 5 */
+.section-5 {
+  width: 100%; /* Full width */
+}
+
+.section-5-top {
+  width: 100%; /* Full width */
+  background-color: #f3f7fa; /* Light background color */
+  text-align: center; /* Center text */
+  padding: 7rem 0; /* Vertical padding */
+}
+
+.section-5-top-heading {
+  font-size: 3.5rem; /* Size for section heading */
+  font-weight: 400; /* Medium font weight */
+  margin-bottom: 4rem; /* Space below heading */
+}
+
+.footer {
+  width: 100%; /* Full width */
+  height: 15rem; /* Set footer height */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack footer items vertically */
+  justify-content: space-between; /* Space between footer items */
+  align-items: center; /* Center items horizontally */
+  padding: 4rem 0 3rem 0; /* Padding for footer */
+}
+
+.footer-top {
+  width: 70%; /* Width for top footer section */
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Space between footer links */
+  border-bottom: 0.1rem dotted #262626; /* Dotted bottom border */
+  padding-bottom: 1rem; /* Space below footer top */
+}
+
+.footer-list {
+  display: flex; /* Flex layout for footer list */
+  align-items: center; /* Center items vertically */
+}
+
+.footer-list li {
+  margin-right: 2.5rem; /* Space between list items */
+}
+
+.footer-list a {
+  font-size: 1.5rem; /* Size for footer links */
+  font-weight: 600; /* Semi-bold font weight */
+  color: #262626; /* Link color */
+}
+
+.footer-list img {
+  width: 3.8rem; /* Size for footer images */
+  opacity: 0.6; /* Slight transparency */
+}
+
+.copyright {
+  font-size: 1.4rem; /* Size for copyright text */
+  font-weight: 600; /* Semi-bold font weight */
+  letter-spacing: 0.1rem; /* Slight letter spacing */
+}
+/* End of Section 5 */
+/* End of Front Page */
+
+/* Login Page */
+.login-page {
+  width: 100%; /* Full width of the page */
+  height: 100vh; /* Full height of the viewport */
+  position: relative; /* Position relative for absolute positioning of children */
+  display: none; /* Hidden by default */
+}
+
+.login-page-content {
+  position: absolute; /* Absolute positioning within the parent */
+  top: 12%; /* Offset from the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to center */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  border: 0.1rem solid #cfcfcf; /* Light gray border */
+  padding: 3rem; /* Padding around content */
+}
+
+.login-page-logo {
+  margin-bottom: 1.2rem; /* Space below logo */
+}
+
+.login-page-logo .p-1 {
+  color: #064699; /* First part of logo color */
+}
+
+.login-page-logo .p-2 {
+  color: #32a4f0; /* Second part of logo color */
+}
+
+.login-page-logo span:nth-child(3) {
+  color: #064699; /* Third part of logo color */
+}
+
+.login-page-logo span:nth-child(4) {
+  color: #32a4f0; /* Fourth part of logo color */
+}
+
+.login-page-form {
+  display: flex; /* Flex layout for form */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.login-page-form input {
+  width: 37rem; /* Input field width */
+  height: 4.5rem; /* Input field height */
+  margin: 1rem; /* Space around input fields */
+  border-radius: 0.5rem; /* Rounded corners */
+}
+
+.form-login-input {
+  padding: 0 1.5rem; /* Padding inside input */
+  border: 0.1rem solid #777; /* Dark gray border */
+  font-size: 1.6rem; /* Font size for input text */
+}
+
+.form-login-btn {
+  background-color: #036bb1; /* Button background color */
+  color: #fff; /* Button text color */
+  border: 0.1rem solid #036bb1; /* Border matching background */
+  font-size: 1.8rem; /* Font size for button text */
+  font-weight: 600; /* Semi-bold font weight */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.form-login-link {
+  font-size: 1.6rem; /* Font size for the link */
+  color: #229fe7; /* Link color */
+  margin: 1.2rem 0 1rem 0; /* Margin around link */
+}
+
+.login-page-form span {
+  width: 2rem; /* Width for separator spans */
+  font-size: 1.8rem; /* Font size for separator spans */
+  color: #888; /* Gray color for separators */
+  margin: 1rem 0; /* Margin around spans */
+  position: relative; /* Position for pseudo-elements */
+}
+
+.login-page-form span::before {
+  content: ""; /* Empty content for the line */
+  width: 16rem; /* Line width */
+  height: 0.1rem; /* Line height */
+  background-color: #ccc; /* Line color */
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Center vertically */
+  right: 3.5rem; /* Positioning from the right */
+  transform: translateY(-50%); /* Center adjustment */
+}
+
+.login-page-form span::after {
+  content: ""; /* Empty content for the line */
+  width: 16rem; /* Line width */
+  height: 0.1rem; /* Line height */
+  background-color: #ccc; /* Line color */
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 3.5rem; /* Positioning from the left */
+  transform: translateY(-50%); /* Center adjustment */
+}
+
+.form-signup-btn {
+  background-color: #dbe8ec; /* Button background color */
+  border: 0.1rem solid #dbe8ec; /* Border matching background */
+  font-size: 1.8rem; /* Font size for button text */
+  font-weight: 600; /* Semi-bold font weight */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* End of Login Page */
+
+/* Sign Up Page */
+.signup-page {
+  width: 100%; /* Full width of the page */
+  height: 100vh; /* Full height of the viewport */
+  background: linear-gradient(
+    to bottom,
+    rgba(112, 112, 112, 0.9),
+    /* Gradient color */ rgba(255, 255, 255, 0.8) 10% /* Gradient color */
+  );
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.signup-page-top {
+  width: 120rem; /* Width of top section */
+  height: 10rem; /* Height of top section */
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 5rem; /* Space below top section */
+}
+
+.signup-page-logo .p-2 {
+  color: #e9e9e9; /* Color for part of the logo */
+}
+
+.signup-page-top button {
+  width: 8rem; /* Button width */
+  padding: 0.7rem; /* Button padding */
+  background-color: transparent; /* Transparent background */
+  border: 0.1rem solid #fff; /* White border */
+  border-radius: 3rem; /* Rounded button corners */
+  font-size: 1.3rem; /* Font size for button text */
+  font-weight: 600; /* Semi-bold font weight */
+  color: #fff; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.signup-page-content {
+  width: 120rem; /* Width of signup content */
+  display: flex; /* Flex layout for content */
+  justify-content: space-between; /* Space between left and right sections */
+}
+
+.signup-page-content-left {
+  width: 60%; /* Left section width */
+  border-right: 0.1rem solid #b1b1b1; /* Light gray border */
+  padding: 3rem 3rem 3rem 0; /* Padding for left section */
+}
+
+.content-left-images {
+  display: flex; /* Flex layout for images */
+  margin-bottom: 5rem; /* Space below image section */
+}
+
+.content-left-images img {
+  width: 15rem; /* Image width */
+  border-radius: 50%; /* Circular images */
+  border: 1.5rem solid #ccc; /* Light gray border around images */
+  margin-right: 5rem; /* Space between images */
+}
+
+.signup-page-content-left h1 {
+  font-size: 4rem; /* Size for main heading */
+  font-weight: 300; /* Light font weight */
+  color: #333; /* Text color */
+  line-height: 1.1; /* Line height for readability */
+}
+
+.signup-page-content-right {
+  width: 40%; /* Right section width */
+  padding: 3rem 0 3rem 3rem; /* Padding for right section */
+  color: #555; /* Text color for right section */
+}
+
+.signup-page-content-right h3 {
+  font-size: 2.4rem; /* Size for subheading */
+  font-weight: 300; /* Light font weight */
+}
+
+.signup-page-content-right h4 {
+  font-size: 1.6rem; /* Size for smaller subheading */
+  font-weight: 500; /* Medium font weight */
+}
+
+.input-group {
+  display: flex; /* Flex layout for input groups */
+  margin: 1.5rem; /* Space around input groups */
+}
+
+.option h3 {
+  font-size: 1.7rem; /* Size for option heading */
+  font-weight: 600; /* Semi-bold font weight */
+}
+
+.option p {
+  font-size: 1.5rem; /* Size for option paragraph */
+}
+
+.input-group input[type="radio"] {
+  width: 30%; /* Width for radio buttons */
+  height: 2rem; /* Height for radio buttons */
+  margin: 0.5rem 1rem 0 -1.5rem; /* Margin around radio buttons */
+}
+/* End of Sign Up Page */
+
+/* Responsive Styles for Various Screen Sizes */
+
+/* Large Screens */
+@media (max-width: 1500px) {
+  /* Adjust padding for dropdown menu */
+  .nav-dropdown {
+    padding: 0 25rem;
+  }
+
+  /* Adjust margin for dropdown items */
+  .nav-dropdown-item {
+    margin: 2rem 6rem;
+  }
+
+  /* Set width for features section */
+  .features {
+    width: 80%;
+  }
+
+  /* Padding for individual feature items */
+  .feature {
+    padding: 0 3rem;
+  }
+}
+
+/* Medium-Large Screens */
+@media (max-width: 1400px) {
+  /* Decrease base font size */
+  html {
+    font-size: 55%;
+  }
+
+  /* Set width for the navbar */
+  .navbar {
+    width: 100rem;
+  }
+
+  /* Adjust height for the first section */
+  .section-1 {
+    height: 70vh;
+  }
+
+  /* Set width for banner paragraph */
+  .banner-paragraph {
+    width: 70%;
+  }
+
+  /* Adjust width for services and features sections */
+  .services {
+    width: 90%;
+  }
+
+  .features {
+    width: 90%;
+  }
+
+  /* Set width for fourth section content */
+  .section-4-content {
+    width: 80%;
+  }
+
+  /* Adjust image wrapper width */
+  .section-4-img-wrapper {
+    width: 40%;
+    margin-right: 6rem;
+  }
+
+  /* Modify background gradient for signup page */
+  .signup-page {
+    background: linear-gradient(
+      to bottom,
+      rgba(112, 112, 112, 0.9),
+      rgba(255, 255, 255, 0.8) 12%
+    );
+  }
+}
+
+/* Medium Screens */
+@media (max-width: 1200px) {
+  /* Set width for signup page top section */
+  .signup-page-top {
+    width: 90rem;
+  }
+
+  /* Change layout for signup page content */
+  .signup-page-content {
+    width: 90rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust width and border settings for left content */
+  .signup-page-content-left {
+    width: 100%;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 0.1rem solid #b1b1b1;
+  }
+
+  /* Set full width for right content */
+  .signup-page-content-right {
+    width: 100%;
+    padding: 3rem;
+  }
+
+  /* Modify radio button dimensions */
+  .input-group input[type="radio"] {
+    width: 10%;
+    margin: 0.5rem 0 0 -3rem;
+  }
+
+  /* Set full width for blue button in right content */
+  .signup-page-content-right .blue-btn {
+    width: 100%;
+    margin: 3rem 0;
+  }
+}
+
+/* Smaller Screens */
+@media (max-width: 1100px) {
+  /* Adjust margin for dropdown items */
+  .nav-dropdown-item {
+    margin: 2rem 3.4rem;
+  }
+}
+
+/* Medium-Small Screens */
+@media (max-width: 1000px) {
+  /* Decrease base font size */
+  html {
+    font-size: 50%;
+  }
+
+  /* Set navbar width and padding */
+  .navbar {
+    width: 100%;
+    padding: 0 5rem;
+  }
+
+  /* Center navbar logo */
+  .navbar-logo {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Style for menu button */
+  .menu {
+    width: 11rem;
+    height: 4rem;
+    border-radius: 3rem;
+    border: 0.1rem solid #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+  }
+
+  /* Animation for menu when toggled */
+  .change .menu {
+    transform: translateX(16rem);
+    position: fixed;
+    top: 2rem;
+    left: 6rem;
+    background-color: #eee;
+  }
+
+  /* Style for menu icon lines */
+  .menu-icon {
+    height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Individual line styles for menu icon */
+  .line {
+    width: 2rem;
+    height: 0.1rem;
+    background-color: #fff;
+    transform-origin: left;
+  }
+
+  /* Transformations for lines when toggled */
+  .change .line-1 {
+    transform: rotate(45deg);
+    background-color: #444;
+  }
+
+  .change .line-2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .change .line-3 {
+    transform: rotate(-45deg);
+    background-color: #444;
+  }
+
+  /* Menu span styling */
+  .menu span {
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  .change .menu span {
+    color: #555;
+  }
+
+  /* Dropdown menu styles */
+  .nav-list,
+  .nav-dropdown-personal,
+  .nav-dropdown-business {
+    position: fixed;
+    top: 0;
+    left: -20rem;
+    width: 20rem;
+    height: 100vh;
+    background: linear-gradient(to bottom, #032181, #094399, #04207c);
+    flex-direction: column;
+    padding-top: 2rem;
+    z-index: 200;
+    transition: left 0.6s cubic-bezier(1, 0, 0, 1);
+  }
+
+  /* Show dropdown menu when toggled */
+  .change .nav-list {
+    left: 0;
+  }
+
+  /* Show dropdown options */
+  .nav-dropdown-personal,
+  .nav-dropdown-business {
+    opacity: 1;
+    visibility: visible;
+    padding: 1rem;
+    justify-content: flex-start;
+  }
+
+  /* Set width and margin for dropdown items */
+  .nav-dropdown-item {
+    width: 100%;
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  /* Dropdown heading styles */
+  .dropdown-heading {
+    display: block;
+  }
+
+  /* Link styles in dropdown */
+  .dropdown-heading a {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .dropdown-heading a i {
+    font-size: 1.5rem;
+    transform: rotate(90deg);
+    margin-right: 1rem;
+  }
+
+  /* Adjust font size for dropdown links */
+  .nav-dropdown-link-1 {
+    font-size: 1.4rem;
+  }
+
+  .nav-dropdown-link-2 {
+    display: none; /* Hide certain links */
+  }
+
+  /* Set styles for list items */
+  .nav-list-item {
+    width: 100%;
+    height: auto;
+    padding: 0 1rem;
+    margin: 0.4rem 0;
+  }
+
+  /* Remove border on hover */
+  .nav-list-item:hover {
+    border-bottom: none;
+  }
+
+  /* Set font size for nav links */
+  .nav-list-link {
+    font-size: 1.4rem;
+  }
+
+  /* Adjust icon size in nav items */
+  .nav-list-item i {
+    font-size: 1.2rem;
+    transform: rotate(-90deg);
+  }
+
+  /* Align navbar buttons to the right */
+  .navbar-buttons {
+    margin-left: auto;
+  }
+
+  /* Adjust section heading size */
+  .section-2-heading {
+    font-size: 4rem;
+  }
+
+  /* Adjust features section width */
+  .features {
+    width: 95%;
+  }
+
+  /* Adjust feature item padding */
+  .feature {
+    padding: 0 1.5rem;
+  }
+
+  /* Change fourth section content layout */
+  .section-4-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Center image wrapper in the fourth section */
+  .section-4-img-wrapper {
+    margin: auto;
+  }
+
+  /* Set fourth section list styles */
+  .section-4-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Change footer layout */
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Set margin for footer list items */
+  .footer-list {
+    margin-bottom: 1rem;
+  }
+
+  /* Set margin for copyright text */
+  .copyright {
+    margin: 1.5rem 0;
+  }
+}
+
+/* Styles for screens up to 800px */
+@media (max-width: 800px) {
+  html {
+    font-size: 45%; /* Decrease base font size for smaller screens */
+  }
+
+  .section-2 {
+    padding: 10rem 0; /* Increase vertical padding for section 2 */
+  }
+
+  .section-2-heading {
+    width: 80%; /* Set width of the heading */
+    text-align: center; /* Center-align the heading text */
+    line-height: 1.2; /* Adjust line height for readability */
+  }
+
+  .services {
+    width: 95%; /* Make services section wider */
+  }
+
+  .service {
+    width: 30rem; /* Fixed width for service items */
+    margin: 0 2rem; /* Margin between service items */
+  }
+
+  .service i {
+    font-size: 4rem; /* Increase icon size */
+  }
+
+  .service-btn {
+    width: 15rem; /* Set fixed width for service buttons */
+    padding: 1rem; /* Add padding for buttons */
+  }
+
+  .features {
+    width: 100%; /* Full width for features section */
+  }
+
+  .feature {
+    width: 50%; /* Adjust feature item width */
+    padding: 0 4rem; /* Add horizontal padding */
+  }
+
+  .signup-page-top {
+    width: 50rem; /* Fixed width for signup page top */
+  }
+
+  .signup-page-content {
+    width: 85%; /* Set width for signup page content */
+    padding: 0 3rem; /* Add padding */
+  }
+
+  .signup-page-content-left {
+    width: 100%; /* Full width for left content */
+    padding: 3rem; /* Add padding */
+  }
+
+  .content-left-images img {
+    width: 14rem; /* Fixed image width */
+    margin: 0 1.5rem; /* Margin between images */
+    border: 1rem solid #ccc; /* Border around images */
+  }
+
+  .signup-page-content-left h1 {
+    font-size: 3rem; /* Adjust heading size */
+  }
+
+  .signup-page-content-right {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    padding: 3rem; /* Add padding */
+  }
+
+  .input-group input[type="radio"] {
+    width: 20%; /* Set width for radio buttons */
+    margin: 0.5rem 1.5rem 0 0; /* Margin for radio buttons */
+  }
+}
+
+/* Styles for screens up to 550px */
+@media (max-width: 550px) {
+  .navbar-logo {
+    display: none; /* Hide logo on small screens */
+  }
+
+  .banner-heading {
+    font-size: 4.5rem; /* Increase heading size for banners */
+  }
+
+  .banner-paragraph {
+    line-height: 1.2; /* Adjust line height */
+  }
+
+  .services {
+    flex-direction: column; /* Stack services vertically */
+    align-items: center; /* Center align service items */
+  }
+
+  .service {
+    width: 60%; /* Adjust service item width */
+    margin-bottom: 4rem; /* Add bottom margin */
+  }
+
+  .section-3-heading {
+    font-size: 4rem; /* Increase size for section 3 heading */
+  }
+
+  .features {
+    flex-direction: column; /* Stack features vertically */
+    align-items: center; /* Center align feature items */
+  }
+
+  .feature {
+    width: 80%; /* Adjust feature item width */
+  }
+
+  .section-4-heading {
+    font-size: 4rem; /* Increase heading size for section 4 */
+  }
+
+  .section-4-content {
+    width: 100%; /* Full width for section 4 content */
+    padding: 0 3rem; /* Add padding */
+  }
+
+  .section-4-img-wrapper {
+    display: none; /* Hide image wrapper */
+  }
+
+  .section-4-list {
+    align-items: flex-start; /* Align list items to the start */
+  }
+
+  .footer-top {
+    width: 90%; /* Adjust footer width */
+  }
+
+  .signup-page-top {
+    width: 40rem; /* Set width for signup page top */
+  }
+
+  .signup-page-content {
+    width: 100%; /* Full width for signup page content */
+  }
+
+  .signup-page-content-left {
+    display: none; /* Hide left content on small screens */
+  }
+
+  .signup-page-content-right {
+    width: 100%; /* Full width for right content */
+  }
+}
+
+/* Styles for screens up to 400px */
+@media (max-width: 400px) {
+  html {
+    font-size: 40%; /* Further decrease base font size */
+  }
+
+  .menu {
+    width: 5rem; /* Set fixed width for the menu */
+  }
+
+  .menu span {
+    display: none; /* Hide menu text on small screens */
+  }
+
+  .number {
+    min-width: 3.5rem; /* Set minimum width for numbers */
+  }
+}
+
+/* End of Responsive */
