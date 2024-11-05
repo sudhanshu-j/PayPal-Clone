@@ -89,3 +89,11 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 ## Acknowledgments
 
 - Inspired by various online payment platforms and user interface design principles.
+
+## Contact
+
+- For any inquiries or feedback, please contact me at:
+
+  **GitHub:** - [Sudhanshu Jha](https://github.com/sudhanshu-j/)
+
+  **Gmail:** - [Sudhanshu Jha](sudhanshujha164@gmail.com)
