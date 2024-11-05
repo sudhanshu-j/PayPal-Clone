@@ -35,3 +35,10 @@ To run this project, you need a web browser (e.g., Chrome, Firefox).
    ```bash
    git clone https://github.com/your-username/paypal-clone.git
    ```
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd paypal-clone
+   ```
+
+3. **Open the index.html file in your web browser to view the project.**
