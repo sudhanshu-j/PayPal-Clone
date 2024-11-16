@@ -4,6 +4,10 @@
 
 This project is a clone of the PayPal platform, created using HTML, CSS, and JavaScript. It is a fully responsive website that offers a seamless user experience across devices. The application includes essential features such as user authentication with Log-In and Sign-Up pages, and it also features a dropdown navigation menu that works in both full-screen and mobile views.
 
+## Live Demo
+
+🔴 [Live Demo](https://transfer-hub.netlify.app)
+
 ## Features
 
 - **Fully Responsive Design**: The website adjusts to various screen sizes, ensuring usability on both desktop and mobile devices.
